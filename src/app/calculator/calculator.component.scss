@@ -1,0 +1,120 @@
+// Paleta moderna
+$primary: #6c63ff; // Roxo suave
+$primary-dark: #574bdb;
+$background: #f0f2f5;
+$text-dark: #2c2c2c;
+$text-light: #6b7280;
+$white: #ffffff;
+
+// Reset básico
+body {
+  margin: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $background;
+  color: $text-dark;
+}
+
+// Container centralizado
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// Caixa de formulário
+.form-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: $white;
+  padding: 2rem; // igual em todos os lados
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  text-align: center;
+
+  width: 100%;
+  max-width: 380px; // controla o tamanho máximo
+  box-sizing: border-box; // garante que o padding não "estoure" a largura
+
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+  }
+}
+
+// Título
+h2 {
+  margin-bottom: 1.5rem;
+  color: $primary;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+// Labels
+label {
+  margin: 0.75rem 0 0.4rem;
+  font-weight: 500;
+  color: $text-light;
+  display: block;
+  text-align: left;
+  width: 100%;
+}
+
+// Inputs
+input[type="number"] {
+  padding: 0.75rem;
+  width: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+
+  &:focus {
+    border-color: $primary;
+    box-shadow: 0 0 0 3px rgba($primary, 0.2);
+  }
+}
+
+// Botão
+button {
+  padding: 0.9rem;
+  background: $primary;
+  color: $white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  transition: background 0.2s ease, transform 0.1s ease;
+
+  &:hover {
+    background: $primary-dark;
+    transform: scale(1.02);
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+// Resultados
+.result-display {
+  margin-top: 1.5rem;
+  font-size: 1.1rem;
+  color: $text-dark;
+
+  #result {
+    display: block;
+    margin-top: 0.5rem;
+    font-weight: 600;
+    color: $primary-dark;
+  }
+}
